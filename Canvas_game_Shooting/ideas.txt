@@ -1,0 +1,15 @@
+- transition for game over 
+- sound when destory enemy 
+- sound for clicking buttons
+- Easy - normal - hard
+- level up "the level becoume harder"
+- super power "for a period"
+
+
+=====================
+Done
+=====================
+- pause the game button 
+- pause the game on blur 
+- mute music button 
+- highest score "local storage"

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+  </head>
+  <body>
+    <canvas></canvas>
+    <div id="liveScore" class="liveScore hidden">Score: 0</div>
+    <div id="soundControlGame" class="soundControl canvasSoundControl hidden"><i class="fas fa-volume-up fa-lg"></i></div>
+    <div id="pauseGameBtn" class="pauseGameBtn hidden"><i class="fas fa-pause fa-lg"></i></div>
+    
+    <!-- Start game menu -->
+    <div id="startGameOptions" class="gameOptions myMenu">
+      <div class="menuHeader">Shooter Game</div>
+      <div class="highestScorecontainer">
+        <span class="highestScoreTxt">Highest score: </span>
+        <span class="highestScore"></span>
+      </div>
+      <div class="soundOption">
+        <span class="soundTxt">Sound:</span>
+        <span class="soundControl"><i class="fas fa-volume-up fa-lg"></i></span>
+      </div>
+      <div id="difficultyLevel" class="difficultyLevel">
+        <span id="easy" data-level="easy">Easy</span>
+        <span id="normal" class="active" data-level="normal">Normal</span>
+        <span id="hard" data-level="hard">Hard</span>
+      </div>
+      <button id="startBtn" class="startBtn myBtn">Start</button>
+    </div>
+
+    <!-- Pause game menu -->
+    <div id="pauseGameMenuElem" class="pauseGameMenu myMenu hidden">
+      <div class="menuHeader">Shooter Game</div>
+      <div class="soundOption">
+        <span class="soundTxt">Sound:</span>
+        <span class="soundControl"><i class="fas fa-volume-up fa-lg"></i></span>
+      </div>
+      <button id="resumeBtn" class="resumeBtn myBtn">Resume</button>
+      <button class="homeBtn myBtn">Home</button>
+
+    </div>
+
+    <!-- End game menu -->
+    <div id="gameOverOptions" class="gameOver myMenu hidden">
+      <div class="menuHeader" >Game Over</div>
+      <div id="finalScore" class="finalScore"></div>
+      <div class="highestScorecontainer">
+        <span class="highestScoreTxt">Highest score: </span>
+        <span class="highestScore"></span>
+      </div>
+      <div class="soundOption">
+        <span class="soundTxt">Sound:</span>
+        <span class="soundControl"><i class="fas fa-volume-up fa-lg"></i></span>
+      </div>
+      <button id="playAgainBtn" class="playAgainBtn myBtn">Play Again</button>
+      <button class="homeBtn myBtn">Home</button>
+
+    </div>
+
+
+    <!--
+      =============================
+        Sound effects
+      =============================
+    -->
+    <audio id="backgroudSound" class="backgroudSound" loop>
+      <source src="sounds/loop_1.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="pauseMenuSound" class="pauseMenuSound" loop>
+      <source src="sounds/house_party.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="fireSound" class="fireSound">
+      <source src="sounds/fire_1.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="playerDieSound" class="playerDieSound">
+      <source src="sounds/die_1.mp3" type="audio/mpeg">
+    </audio>
+    
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
